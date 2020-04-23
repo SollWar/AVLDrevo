@@ -28,10 +28,20 @@ namespace AVLDrevo
 
             int balance = p == null ? 0 : height(p.left) - height(p.right);
 
-            if (balance > 1 && x > p.left.key) // right key
+            if (balance > 1 && x > p.left.key) // left key
                 return RightRotate(p);
-            if (balance < - 1 && x > p.right.key) // left key
+            if (balance < - 1 && x > p.right.key) // right key
                 return LeftRotate(p);
+            if (balance > 1 && x > p.left.key) // left right
+            {
+                p.left = LeftRotate(p.left);
+                return RightRotate(p);
+            }
+            if (balance < - 1 && x < p.right.key)
+            {
+                p.right = RightRotate(p.right);
+                return LeftRotate(p);
+            }
             return p;
         }
 
