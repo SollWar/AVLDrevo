@@ -1,0 +1,6 @@
+C:\Users\Sollw\source\repos\AVLDrevo\obj\Debug\AVLDrevo.csprojAssemblyReference.cache
+C:\Users\Sollw\source\repos\AVLDrevo\bin\Debug\AVLDrevo.exe.config
+C:\Users\Sollw\source\repos\AVLDrevo\bin\Debug\AVLDrevo.exe
+C:\Users\Sollw\source\repos\AVLDrevo\bin\Debug\AVLDrevo.pdb
+C:\Users\Sollw\source\repos\AVLDrevo\obj\Debug\AVLDrevo.exe
+C:\Users\Sollw\source\repos\AVLDrevo\obj\Debug\AVLDrevo.pdb
