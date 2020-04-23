@@ -12,17 +12,19 @@ namespace AVLDrevo
         {
             var obj = new AvlThree();
             var rnd = new System.Random();
-            obj.Insert(5);
-            obj.Insert(3);
-            obj.Insert(7);
-            obj.Insert(2);
-            obj.Insert(4);
 
+            var init = Enumerable.Range(0, 15).ToArray();
 
-            obj.root = obj.RR(obj.root);
-            obj.root = obj.LL(obj.root);
+            for (int i = 0; i < 15; i++)
+            {
+                obj.Insert(i);
+            }
+
+            //obj.root = obj.RR(obj.root);
+            //obj.root = obj.LL(obj.root);
 
             obj.Print1();
+
 
             Console.ReadKey();
         }

@@ -28,7 +28,39 @@ namespace AVLDrevo
 
             int balance = p == null ? 0 : height(p.left) - height(p.right);
 
+            if (balance > 1 && x > p.left.key) // right key
+                return RightRotate(p);
+            if (balance < - 1 && x > p.right.key) // left key
+                return LeftRotate(p);
             return p;
+        }
+
+        private Node RightRotate(Node y)
+        {
+            var x = y.left;
+            var T2 = x.right;
+
+            x.right = y;
+            y.left = T2;
+
+            y.height = Math.Max(height(y.left), height(y.right)) + 1;
+            x.height = Math.Max(height(x.left), height(x.right)) + 1;
+
+            return x;
+        }
+
+        private Node LeftRotate(Node x)
+        {
+            var y = x.right;
+            var T2 = y.left;
+
+            y.left = x;
+            x.right = T2;
+
+            y.height = Math.Max(height(y.left), height(y.right)) + 1;
+            x.height = Math.Max(height(x.left), height(x.right)) + 1;
+
+            return y;
         }
 
         public void Insert(int x)
